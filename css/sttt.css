@@ -1,0 +1,54 @@
+ 
+#fn1{ font-size:1.6vw; font-family:Verdana;color: black;}   /* border-color used for mack colorful border */ 
+#sn1{ font-size: 1.6vw; font-family:Verdana;color: black;} 
+#code{border-color: black;height: 25px;}
+option{border-color: black;width: 100%;
+            height: 5%;
+            border: 1px;
+            border-radius: 05px;
+            padding: 8px 20px 8px 20px;
+            box-shadow: 1px 1px 2px 1px gray;}   /* color is used for do color in font*/
+#telephone1{ font-size: 1.6vw; font-family: Verdana; color: black;}  
+#email1{ font-size: 1.6vw; font-family: Verdana;color: black;}  
+#address1{  font-size: 1.6vw; font-family: Verdana; color: black}
+#textarea{border-color: black;}
+#fn,#sn,#telephone,#email,#address,#cpass{
+	border-color: black;
+	height: 25px;
+	width: 300px;
+
+}
+td{
+	height: 50px;
+}
+p{
+	font-family: Verdana;
+	font-size:1.6vw;
+	color:black;
+}
+#uemail,#upass{
+	border-color: black;
+	height: 25px;
+	width: 300px;
+}
+input{
+            width: 100%;
+            height: 5%;
+            border: 1px;
+            border-radius: 05px;
+            padding: 8px 20px 8px 20px;
+            box-shadow: 1px 1px 2px 1px gray;
+
+
+        }
+
+textarea{
+	width:100%;
+	height: 60%;
+	border: 1px;
+	border-radius: 05px;
+    padding: 8px 20px 8px 20px;
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+
