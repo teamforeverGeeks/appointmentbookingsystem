@@ -13,7 +13,7 @@ $upass=$_POST['upass'];
 $cpass=$_POST['cpass'];
 
 
-$sql= "select * from signup where email='$email' ";
+$spl= "select * from signup where email='$email' ";
 
 $result = mysqli_query($con,$spl);       // this condition used for compare the database and database value if the connection and insert query is correct then data entered in database , else message is come please try again
 	if(mysqli_num_rows($result)>0){

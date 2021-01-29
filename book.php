@@ -3,19 +3,17 @@ if(isset($_GET['date'])){
     $date = $_GET['date'];
 }
 
-if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $sname = $_POST['sname'];
     $staff = $_POST['staff'];
     $time = $_POST['time'];
-
     $mysqli = new mysqli('localhost', 'shrushti', 'Codder@2001', 'ict342');
-    $stmt = $mysqli->prepare("INSERT INTO bookings (name, email, date,b_service,b_staff,b_time) VALUES (?,?,?,?,?,?)");
-    $stmt->bind_param('sss', $name, $email, $date, $sname, $staff ,$time);
+    $stmt = $mysqli->prepare("INSERT INTO bookings (name, email,date) VALUES (?,?,?)");
+    $stmt->bind_param('sss', $name, $email, $date);
     $stmt->execute();
     $msg = "<div class='alert alert-success'>Booking Successfull</div>";
-    $payment = "<div class='alert alert-success'>Pay Now</div>";
     $stmt->close();
     $mysqli->close();
 }
@@ -23,15 +21,15 @@ if(isset($_POST['submit'])){
 ?>
 
 
-<?php
+
+
+
+
+
+
+ <?php
 include "responsiv.php";
 ?>
-
-
-
-
-
-
 
 <!doctype html>
 <html lang="en">
@@ -48,6 +46,8 @@ include "responsiv.php";
   </head>
 
   <body>
+
+   
 
     <?php
 
@@ -72,11 +72,11 @@ else{
         <h1 class="text-center">Book for Date: <?php echo date('m/d/Y', strtotime($date)); ?></h1><hr>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-               <?php echo isset($msg)?$msg:'';  ?>
+            <?php echo isset($msg)?$msg:'';  ?>
 
 
 
-                <form mail="shonapanchal67@gmail.com" method="post" autocomplete="off">
+                <form action="insertbooking.php" method="post" autocomplete="off">
                     <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" class="form-control" name="name">
